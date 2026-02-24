@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RadioML Modulation Classifier</title>
+</head>
+
+<body style="font-family: Arial; text-align:center; margin-top:60px;">
+
+<h1>📡 Radio Signal Modulation Classifier</h1>
+
+<form action="/predict" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <br><br>
+    <button type="submit">Predict</button>
+</form>
+
+{% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    <h3>Confidence: {{ confidence }}%</h3>
+{% endif %}
+
+</body>
+</html>
